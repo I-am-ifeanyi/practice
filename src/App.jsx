@@ -22,7 +22,7 @@ function App() {
         lightMode ? "bg-[#F2F4F4]" : "bg-[#3e4142]"
       } ${lightMode ? "text-[#121212]" : "text-[white]"} shadow-2xl transition-all duration-700`}
     >
-      <div className="flex items-center w-full justify-between md:mt-0 mt-[-100px]">
+      <div className="flex items-center w-full justify-between md:mt-0 mt-[-200px]">
         <h1 className="text-4xl font-bold mb-5 underline">
           THE{" "}
           <span className="text-2xl font-bold text-[#2471A3]">TYPETEST!</span>
@@ -58,9 +58,9 @@ function App() {
           </button>
         </div>
       </div>
-      <div className="flex w-full md:w-3/4 justify-between  bg-[#122430] mt-3 p-2 rounded">
+      <div className="flex w-full h-[300px] md:h-auto md:w-3/4 justify-between   bg-[#122430] mt-3 p-2 rounded">
         <textarea
-          className={`w-[70%] md:w-2/3 h-44 border shadow-black my-3 ${
+          className={`w-[70%] md:w-2/3 md:h-44 h-58 border shadow-black my-3 ${
             isGameOn ? "text-black" : "text-white"
           } p-2`}
           placeholder="Please type here..."
@@ -69,7 +69,7 @@ function App() {
           disabled={isGameOn && timeRemaining !== 0 ? false : true}
           ref={textAreaRef}
         />
-        <div className="w-[27%] md:w-1/4 bg-white/40 rounded px-3 flex flex-col justify-center">
+        <div className="w-[27%] md:w-1/4 bg-white/40 rounded px-3 md:mt-0 mt-10 text-white h-[200px] flex flex-col justify-center">
           <button
             className="my-3 p-2 md:my-5 md:py-3 bg-[#2471A3] font-bold rounded-lg text-xl border text-center hover:bg-[#4881a8]"
             onClick={startGame}

@@ -58,9 +58,9 @@ function App() {
           </button>
         </div>
       </div>
-      <div className="flex w-full h-[300px] md:h-auto md:w-3/4 justify-between   bg-[#122430] mt-3 p-2 rounded">
+      <div className="md:flex  w-full h-[300px] md:h-auto md:w-3/4 justify-between   bg-[#122430] mt-3 p-2 rounded">
         <textarea
-          className={`w-[70%] md:w-2/3 md:h-44 h-58 border shadow-black my-3 ${
+          className={`w-full md:w-2/3 md:h-44 h-[60%] border shadow-black my-3 ${
             isGameOn ? "text-black" : "text-white"
           } p-2`}
           placeholder="Please type here..."
@@ -69,20 +69,22 @@ function App() {
           disabled={isGameOn && timeRemaining !== 0 ? false : true}
           ref={textAreaRef}
         />
-        <div className="w-[27%] md:w-1/4 bg-white/40 rounded px-3 md:mt-0 mt-10 text-white h-[200px] flex flex-col justify-center">
+        <div className="w-full md:w-1/4 bg-white/40 rounded px-3 md:mt-0 text-white flex md:flex-col flex-row items-center justify-between md:justify-center">
           <button
-            className="my-3 p-2 md:my-5 md:py-3 bg-[#2471A3] font-bold rounded-lg text-xl border text-center hover:bg-[#4881a8]"
+            className="w-1/2 my-3 p-2 md:my-5 md:py-3 bg-[#2471A3] font-bold rounded-lg text-xl border text-center hover:bg-[#4881a8]"
             onClick={startGame}
             disabled={isGameOn ? true : false}
           >
             {isGameOn ? "Typing..." : "Start!"}
           </button>
+          <div className="flex flex-col pb-2 border-[#2471A3] border px-2">
           <p className="text-sm md:text-md text-center mb-3">
             Total Word Count:
           </p>
           <button className="py-2 px-5 bg-[#2471A3] font-bold rounded-lg text-2xl border hover:bg-[#4881a8]">
             {wordCount}
           </button>
+          </div>
         </div>
       </div>
 

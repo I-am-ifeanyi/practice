@@ -71,7 +71,7 @@ function App() {
         />
         <div className="w-full md:w-1/4 bg-white/40 rounded px-3 md:mt-0 text-white flex md:flex-col flex-row items-center justify-between md:justify-center">
           <button
-            className="w-1/2 my-3 p-2 md:my-5 md:py-3 bg-[#2471A3] font-bold rounded-lg text-xl border text-center hover:bg-[#4881a8]"
+            className="w-1/2 my-3 p-2 md:w-full md:my-5 md:py-3 bg-[#2471A3] font-bold rounded-lg text-xl border text-center hover:bg-[#4881a8]"
             onClick={startGame}
             disabled={isGameOn ? true : false}
           >
